@@ -1,0 +1,13 @@
+{
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+      "action": {
+        "type": "shell",
+        "command": "node .antigravity/skills/seo-module-builder/scripts/check-file-size.js"
+      },
+      "description": "Tự động kiểm tra giới hạn dung lượng file <= 300 dòng sau mỗi lần chỉnh sửa code"
+    }
+  ]
+}

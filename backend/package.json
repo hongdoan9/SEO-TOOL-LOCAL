@@ -1,0 +1,28 @@
+{
+  "name": "seo-tool-backend",
+  "version": "1.0.0",
+  "description": "Local Backend for SEO Tool",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "better-queue": "^3.8.12",
+    "better-queue-sqlite": "^1.0.7",
+    "busboy": "^1.6.0",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.69.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "googleapis": "^173.0.0",
+    "jszip": "^3.10.1",
+    "multer": "^2.2.0",
+    "pizzip": "^3.2.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

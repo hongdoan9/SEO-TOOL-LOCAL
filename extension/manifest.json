@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SEO Tool V2 - Social Profile Agent",
+  "version": "1.0.0",
+  "description": "Chrome Extension thực thi tạo Profile Social tự động cho SEO Tool V2",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://localhost:5050/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "SEO Tool Profile Agent"
+  },
+  "incognito": "spanning"
+}

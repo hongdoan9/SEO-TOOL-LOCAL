@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Nhựa Vĩ Hưng - Nhà máy sản xuất nhựa tại TPHCM.kml</name>
+	<StyleMap id="listing_A">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#listing_A0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#listing_A1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="listing_A0">
+		<IconStyle>
+			<Icon>
+				<href>https://www.google.com/mapfiles/kml/paddle/A.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text>$[description]</text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>00ffffff</color>
+		</LineStyle>
+	</Style>
+	<Style id="listing_A1">
+		<IconStyle>
+			<Icon>
+				<href>https://www.google.com/mapfiles/kml/paddle/A.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text>$[description]</text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>00ffffff</color>
+		</LineStyle>
+	</Style>
+	<Placemark id="1.2.1">
+		<name>Nhựa Vĩ Hưng - Nhà máy sản xuất nhựa tại TPHCM</name>
+		<address>309-311 Đ. Lũy Bán Bích, Hòa Thạnh, Tân Phú, Thành phố Hồ Chí Minh</address>
+		<phoneNumber>028 3860 8822</phoneNumber>
+		<snippet>309-311 Đ. Lũy Bán Bích, Hòa Thạnh, Tân Phú, Thành phố Hồ Chí Minh</snippet>
+		<description><![CDATA[<!DOCTYPE html><html><head><script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@graph":[
+{
+"@type":"LocalBusiness",
+"@id":"kg:/g/1tkb2lzr",
+"url":"https://vihungplastic.com/",
+"name":"Nhựa Vĩ Hưng",
+"alternateName":[
+"Công ty TNHH Nhựa Vĩ Hưng",
+"Nhà máy Nhựa Vĩ Hưng",
+"nhuavihung"
+],
+"legalName":"Công ty TNHH Nhựa Vĩ Hưng",
+"description":"Nhựa Vĩ Hưng là doanh nghiệp chuyên cung cấp giải pháp toàn diện gồm: Nhựa gia dụng, Nhựa công nghiệp, Bao bì thực phẩm và Linh kiện xe máy. Với quy trình sản xuất khép kín sử dụng nhựa chính phẩm và đạt chuẩn ISO 9001:2015, HACCP, là đối tác của Pepsi, Coca-Cola, Nestlé.",
+"disambiguatingDescription": "Nhựa Vĩ Hưng tự hào là thương hiệu quốc gia và quốc tế, chuyên cung cấp Premium Plastic Solutions hiện diện tại hơn 500 nhà phân phối trong nước và xuất khẩu đến hơn 60 quốc gia, bao gồm New Zealand, Nga, Pháp và Canada.
+Chúng tôi tập trung vào 4 danh mục cốt lõi: Nhựa gia dụng: An toàn, tiện ích cho đời sống hiện đại, Nhựa công nghiệp: Thùng rác, pallet kỹ thuật cao, Bao bì thực phẩm: Đạt chuẩn an toàn vệ sinh, Linh kiện xe máy: Chính xác và bền bỉ. Nhựa Vĩ Hưng là nhà máy sản xuất nhựa hiện đại với quy trình kiểm soát nghiêm ngặt từng sản phẩm. Cam kết sử dụng nhựa chính phẩm giúp sản phẩm đạt độ tinh khiết và độ bền vượt trội. Uy tín của Vĩ Hưng được bảo chứng qua các chứng nhận quốc tế ISO 9001:2015, HACCP và các tiêu chuẩn kiểm toán khắt khe từ đối tác toàn cầu như Pepsi, Heineken, Nestlé (PMG GMP).",
+"image":"https://vihungplastic.com/wp-content/uploads/2025/09/banner-web.jpg",
+"logo":"https://vihungplastic.com/wp-content/uploads/2025/02/logo.png",
+"sameAs":[
+"https://www.google.com/search?kgmid=/g/1tkb2lzr",
+"https://sites.google.com/view/nhuavihung/",
+"https://www.youtube.com/@nhuavihungofficialchannel1220",
+"https://www.youtube.com/@nhuavihungvn",
+"https://x.com/nhuavihung",
+"https://www.pinterest.com/nhuavihungvn/",
+"https://www.pearltrees.com/nhuavihungvn",
+"https://www.behance.net/nhuavihungvn",
+"https://www.reddit.com/user/nhuavihungvn/",
+"https://nhuavihungvn.blogspot.com/",
+"https://medium.com/@nhuavihung",
+"https://www.instagram.com/nhuavihungvn/",
+"https://www.quora.com/profile/Nhựa-Vĩ-Hưng-1",
+"https://www.flickr.com/people/204068411@N06/",
+"https://www.facebook.com/vihungplastic",
+"https://www.tiktok.com/@nhuavihung",
+"https://about.me/nhuavihungvn",
+"https://500px.com/p/nhuavihungvietnam",
+"https://www.diigo.com/profile/nhuavihung",
+"https://linktr.ee/nhuavihung",
+"https://gravatar.com/nhuavihung",
+"https://www.diigo.com/profile/nhuavihung",
+"https://drive.google.com/drive/folders/1i6fjSZjtkoYyvJZJ9QrdGqWNYatw-OpL"
+],
+"actionableFeedbackPolicy":[
+"https://vihungplastic.com/chinh-sach-mua-si-nhua-vi-hung/",
+"https://vihungplastic.com/chinh-sach-van-chuyen-giao-hang-cua-nhua-vi-hung/",
+"https://vihungplastic.com/chinh-sach-doi-tra-va-hoan-tien-cua-nhua-vi-hung/",
+"https://vihungplastic.com/chinh-sach-kiem-hang/",
+"https://vihungplastic.com/chinh-sach-bao-hanh-cong-ty-tnhh-nhua-vi-hung/",
+"https://vihungplastic.com/chinh-sach-bao-mat-thong-tin/",
+"https://vihungplastic.com/chinh-sach-gia-cong-nhua-vi-hung/"
+],
+"award":[
+"https://vihungplastic.com/nang-luc/thanh-tuu-chung-nhan-iso-haccp-nhua-vi-hung/",
+"Hàng Việt Nam Chất Lượng Cao",
+"Hàng Việt Nam Chất Lượng Cao (HVNCLC) – 15 năm liên tiếp",
+"HVNCLC – Chuẩn Hội Nhập",
+"Sản phẩm – Dịch vụ tiêu biểu TP.HCM năm 2025"
+],
+"naics":"326",
+"mainEntityOfPage":[
+{
+"@type":"WebPage",
+"@id":"https://vihungplastic.com/#Webpage"
+},
+{
+"@id":"https://vihungplastic.com/ve-chung-toi/#Webpage"
+}
+],
+"foundingDate":"1999-06-30",
+"foundingLocation":{
+"@type":"place",
+"name":"Việt Nam",
+"url":"https://vi.wikipedia.org/wiki/Việt_Nam",
+"address":"309-311 Luỹ Bán Bích, Phường Phú Thạnh, Thành phố Hồ Chí Minh, Việt Nam"
+},
+"hasMap":[
+"https://www.google.com/maps?cid=6303529148881693629",
+"https://www.google.com/maps/place/C%C3%B4ng+Ty+TNHH+Nh%E1%BB%B1a+V%C4%A9+H%C6%B0ng/@10.7721242,106.631932,17z/data=!3m1!4b1!4m6!3m5!1s0x31752ea0335acc3d:0x577aa25d0669ebbd!8m2!3d10.7721242!4d106.631932!16s%2Fg%2F1tkb2lzr?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+],
+"taxID":"0301744877",
+"address":{
+"@type":"PostalAddress",
+"name":"Nhựa Vĩ Hưng",
+"streetAddress":"309-311 Luỹ Bán Bích, Phường Phú Thạnh, Thành phố Hồ Chí Minh, Việt Nam",
+"addressLocality":"Thành phố Hồ Chí Minh",
+"addressRegion":"Hồ Chí Minh",
+"addressCountry":"Việt Nam",
+"postalCode":"700000"
+},
+"geo":{
+"@type":"GeoCoordinates",
+"latitude":"10.7721242",
+"longitude":"106.631932"
+},
+"areaServed":{
+"@type":"Country",
+"name":"Việt Nam",
+"url":[
+"https://vi.wikipedia.org/wiki/Việt_Nam",
+"http://www.productontology.org/doc/Vietnam",
+"https://www.wikidata.org/wiki/Q881"
+]
+},
+"potentialAction":{
+"@type":"CommunicateAction",
+"target":{
+"@type":"EntryPoint",
+"urlTemplate":"https://vihungplastic.com/lien-he/",
+"inLanguage":"vi-VN",
+"actionPlatform":[
+"https://schema.org/DesktopWebPlatform",
+"https://schema.org/IOSPlatform",
+"https://schema.org/AndroidPlatform"
+]
+},
+"result":{
+"@type":"Reservation",
+"name":"Liên hệ"
+}
+},
+"hasOfferCatalog":[
+{
+"@type":"OfferCatalog",
+"name":"Đồ nhựa gia dụng",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/",
+"numberOfItems":"32",
+"itemListElement":[
+{
+"@type":"Offer",
+"name":"Bàn Nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ban-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ban-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Ghế nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ghe-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ghe-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Ghế trẻ em",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ghe-tre-em/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ghe-tre-em/"
+},
+{
+"@type":"Offer",
+"name":"Tủ Nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/tu-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/tu-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Tủ đựng đồ mini",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/tu-dung-do-mini/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/tu-dung-do-mini/"
+},
+{
+"@type":"Offer",
+"name":"Kệ Nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ke-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ke-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Thùng đa năng",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thung-da-nang/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thung-da-nang/"
+},
+{
+"@type":"Offer",
+"name":"Thùng nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thung-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thung-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Giỏ nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/gio-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/gio-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Rổ nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ro-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ro-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Sọt nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/sot-nhua-song-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/sot-nhua-song-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Sóng nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/song-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/song-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Thau nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thau-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thau-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Bộ rổ thau",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/bo-ro-thau-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/bo-ro-thau-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Thau tắm",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thau-tam/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/thau-tam/"
+},
+{
+"@type":"Offer",
+"name":"Xô nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/xo-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/xo-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Gáo nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/gao-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/gao-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Ky rác nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ky-rac-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ky-rac-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Móc treo quần áo",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/moc-treo-quan-ao/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/moc-treo-quan-ao/"
+},
+{
+"@type":"Offer",
+"name":"Bô nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/bo-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/bo-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Hộp đựng thực phẩm",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/hop-dung-thuc-pham/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/hop-dung-thuc-pham/"
+},
+{
+"@type":"Offer",
+"name":"Hủ đựng gia vị",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/hu-dung-gia-vi/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/hu-dung-gia-vi/"
+},
+{
+"@type":"Offer",
+"name":"Chai đựng sốt",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/chai-dung-sot/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/chai-dung-sot/"
+},
+{
+"@type":"Offer",
+"name":"Bình nước",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/binh-nuoc/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/binh-nuoc/"
+},
+{
+"@type":"Offer",
+"name":"Ca nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ca-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ca-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Ly nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ly-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ly-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Lồng bàn",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/long-ban/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/long-ban/"
+},
+{
+"@type":"Offer",
+"name":"Khay úp ly – Mâm nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/khay-up-ly-mam-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/khay-up-ly-mam-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Ống đũa nhựa – Ống dao",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ong-dua-nhua-ong-dao/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/ong-dua-nhua-ong-dao/"
+},
+{
+"@type":"Offer",
+"name":"Hộp khăn giấy",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/hop-khan-giay/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/hop-khan-giay/"
+},
+{
+"@type":"Offer",
+"name":"Muỗng nhựa – Nĩa nhựa",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/muong-nhua-nia-nhua/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/muong-nhua-nia-nhua/"
+},
+{
+"@type":"Offer",
+"name":"Sản phẩm gia dụng khác",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/san-pham-gia-dung-khac/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-gia-dung/san-pham-gia-dung-khac/"
+}
+]
+},
+{
+"@type":"OfferCatalog",
+"name":"Sản phẩm nhựa công nghiệp",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-nhua-cong-nghiep/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-nhua-cong-nghiep/",
+"numberOfItems":"2",
+"itemListElement":[
+{
+"@type":"Offer",
+"name":"Linh kiện xe máy",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-nhua-cong-nghiep/linh-kien-xe-may/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-nhua-cong-nghiep/linh-kien-xe-may/"
+},
+{
+"@type":"Offer",
+"name":"Thùng rác công nghiệp",
+"@id":"https://vihungplastic.com/danh-muc-san-pham/nhom-nhua-cong-nghiep/thung-rac-cong-nghiep/#Category",
+"url":"https://vihungplastic.com/danh-muc-san-pham/nhom-nhua-cong-nghiep/thung-rac-cong-nghiep/"
+}
+]
+},
+{
+"@type":"OfferCatalog",
+"name":"E-Catalogue",
+"@id":"https://vihungplastic.com/catalog-vi/#Thing",
+"url":"https://vihungplastic.com/catalog-vi/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Profile Nhựa Vĩ Hưng",
+"@id":"https://vihungplastic.com/profile-nhua-vi-hung/#Thing",
+"url":"https://vihungplastic.com/profile-nhua-vi-hung/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Nhà Máy Sản Xuất",
+"@id":"https://vihungplastic.com/nang-luc/nha-may-san-xuat-nhua-vi-hung/#Thing",
+"url":"https://vihungplastic.com/nang-luc/nha-may-san-xuat-nhua-vi-hung/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Năng Lực Sản Xuất",
+"@id":"https://vihungplastic.com/nang-luc/nang-luc-san-xuat-nhua-khoi-luong-lon/#Thing",
+"url":"https://vihungplastic.com/nang-luc/nang-luc-san-xuat-nhua-khoi-luong-lon/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Công Nghệ Và Quy Trình Sản Xuất",
+"@id":"https://vihungplastic.com/nang-luc/cong-nghe-quy-trinh-san-xuat-nhua-hien-dai/#Thing",
+"url":"https://vihungplastic.com/nang-luc/cong-nghe-quy-trinh-san-xuat-nhua-hien-dai/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Quy Trình Kiểm Soát Chất Lượng",
+"@id":"https://vihungplastic.com/nang-luc/quy-trinh-kiem-soat-chat-luong-nhua/#Thing",
+"url":"https://vihungplastic.com/nang-luc/quy-trinh-kiem-soat-chat-luong-nhua/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Thành Tựu & Chứng Nhận",
+"@id":"https://vihungplastic.com/nang-luc/thanh-tuu-chung-nhan-iso-haccp-nhua-vi-hung/#Thing",
+"url":"https://vihungplastic.com/nang-luc/thanh-tuu-chung-nhan-iso-haccp-nhua-vi-hung/",
+"numberOfItems":"1"
+},
+{
+"@type":"OfferCatalog",
+"name":"Các Dự Án Gia Công",
+"@id":"https://vihungplastic.com/nang-luc/du-an-gia-cong-nhua-oem-odm-tieu-bieu/#Thing",
+"url":"https://vihungplastic.com/nang-luc/du-an-gia-cong-nhua-oem-odm-tieu-bieu/",
+"numberOfItems":"1"
+}
+],
+"numberOfEmployees":{
+"@type":"QuantitativeValue",
+"minvalue":"50",
+"maxvalue":"100",
+"value":"85"
+},
+"employee":[
+{
+"@id":"https://vihungplastic.com/luu-bich-chau/#Person"
+},
+"Lưu Kiến Văn",
+"Lưu Kiến Quyền"
+],
+"currenciesAccepted": [
+"VND",
+"EUR",
+"USD"
+],
+"paymentAccepted": [
+"Cash",
+"Credit Card",
+"Visa"
+],
+"priceRange": "10000 VND - 1000000000 VND",
+"telephone":"02838608822",
+"openingHoursSpecification":
+{
+"@type":"OpeningHoursSpecification",
+"dayOfWeek":[
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday"
+],
+"opens":"08:00",
+"closes":"17:30"
+},
+"review":[
+{
+"@type":"Review",
+"author":{
+"@type":"Person",
+"name":"Chi Ngư Kiều Linh"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Nhựa Vĩ Hưng",
+"sameAs":"https://maps.app.goo.gl/pB1TqB2qXwMrErSS9"
+},
+"description":"Đồ nhựa Vĩ Hưng siêu bền ý, tui mua cái bình sài bền quãii lunn	",
+"inLanguage":"vi",
+"reviewRating":{
+"@type":"Rating",
+"ratingValue":5
+}
+},
+{
+"@type":"Review",
+"author":{
+"@type":"Person",
+"name":"zenkul nam"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Nhựa Vĩ Hưng",
+"sameAs":"https://maps.app.goo.gl/AaWfNgtL5E3fJsAa6"
+},
+"description":"Mình xài SP nhựa Vĩ Hưng đã lâu, thấy sản phẩm rất đa dạng và rất xịn nha mọi người, nên mua nha",
+"inLanguage":"vi",
+"reviewRating":{
+"@type":"Rating",
+"ratingValue":5
+}
+},
+{
+"@type":"Review",
+"author":{
+"@type":"Person",
+"name":"Công Trần"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Nhựa Vĩ Hưng",
+"sameAs":"https://maps.app.goo.gl/QWnZnNA3qAociaxg9"
+},
+"description":"Rơi loảng choảng mà vẫn chưa bể nứt gì",
+"inLanguage":"vi",
+"reviewRating":{
+"@type":"Rating",
+"ratingValue":5
+}
+},
+{
+"@type":"Review",
+"author":{
+"@type":"Person",
+"name":"SA Gin Vlog"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Nhựa Vĩ Hưng",
+"sameAs":"https://maps.app.goo.gl/Z7zt2NoKi1DDhuZz7"
+},
+"description":"Vĩ Hưng Plastic",
+"inLanguage":"vi",
+"reviewRating":{
+"@type":"Rating",
+"ratingValue":5
+}
+}
+],
+"AggregateRating":{
+"@type":"AggregateRating",
+"ratingValue":3.9,
+"reviewCount":28
+},
+"ContactPoint":{
+"@type":"ContactPoint",
+"url":"https://vihungplastic.com/lien-he/",
+"@id":"https://vihungplastic.com/lien-he/#Contact",
+"email": "info@vihungplastic.com",
+"telephone":[
+"02838608822",
+"0906828980",
+"02839690626"
+],
+"contactType":"Customer service"
+}
+},
+{
+"@type":"WebPage",
+"@id":"https://vihungplastic.com/#Webpage",
+"url":"https://vihungplastic.com/",
+"name":"Nhựa Vĩ Hưng",
+"headline":"Nhựa Vĩ Hưng",
+"alternativeheadline":"Công ty TNHH Nhựa Vĩ Hưng",
+"isPartOf":{
+"@id":"https://vihungplastic.com/#Website"
+},
+"inLanguage":"vi-VN",
+"primaryImageOfPage":{
+"@type":"ImageObject",
+"url":"https://vihungplastic.com/wp-content/uploads/2025/09/banner-web.jpg"
+},
+"thumbnailUrl":"https://vihungplastic.com/wp-content/uploads/2025/09/banner-web.jpg",
+"description":"Nhựa Vĩ Hưng là doanh nghiệp chuyên cung cấp giải pháp toàn diện gồm: Nhựa gia dụng, Nhựa công nghiệp, Bao bì thực phẩm và Linh kiện xe máy. Với quy trình sản xuất khép kín sử dụng nhựa chính phẩm và đạt chuẩn ISO 9001:2015, HACCP, là đối tác của Pepsi, Coca-Cola, Nestlé."
+},
+{
+"@type":"Person",
+"url":"https://vihungplastic.com/luu-bich-chau/",
+"@id":"https://vihungplastic.com/luu-bich-chau/#Person",
+"familyName":"Lưu",
+"givenName":"Bích",
+"name":"Châu",
+"mainEntityOfPage":"https://vihungplastic.com/luu-bich-chau/",
+"alternateName":[
+"Lưu Bích Châu",
+"Phó giám đốc Lưu Bích Châu",
+"PGD Lưu Bích Châu",
+"PGĐ Lưu Bích Châu"
+],
+"jobTitle":"Deputy Director",
+"gender":"https://schema.org/Female",
+"image":[
+"https://vihungplastic.com/wp-content/uploads/2026/03/luu-bich-chau.jpg",
+"https://vihungplastic.com/wp-content/uploads/2019/02/IMG_2788-1024x683.jpg",
+"https://vihungplastic.com/wp-content/uploads/2019/06/06-1024x693.png"
+],
+"knowsLanguage":[
+"en-EN",
+"vi-VN",
+"zh-CN"
+],
+"description":"Lưu Bích Châu là Phó giám đốc điều hành trực tiếp tại Công ty TNHH Nhựa Vĩ Hưng với hơn 10 năm kinh nghiệm trong ngành nhựa. Với nền tảng giáo dục quản trị hiện đại từ Trung Quốc kết hợp với hơn 10 năm kinh nghiệm thực chiến tại nhà máy nhựa Vĩ Hưng, bà sở hữu góc nhìn đa chiều: từ kỹ thuật ép phun chính xác, khoa học vật liệu PP, PE, HDPE,.. đến chiến lược phân phối B2B/B2C cho đồ nhựa gia dụng và công nghiệp. Lưu Bích Châu không chỉ là người quản lý mà còn trực tiếp giám sát quy trình từ hạt nhựa nguyên sinh đến thành phẩm cuối cùng, đảm bảo mỗi sản phẩm nhựa mang thương hiệu Nhựa Vĩ Hưng đều đạt tiêu chuẩn chất lượng khắt khe nhất.",
+"disambiguatingDescription":"Phó giám đốc Lưu Bích Châu là người điều hành trực tiếp tại Công ty TNHH Nhựa Vĩ Hưng, với hơn 10 năm kinh nghiệm trong ngành nhựa. Hành trình của bà là sự kết hợp giữa tư duy quản trị chuẩn Trung và sự am hiểu sâu sắc thị trường sản xuất tại Việt Nam. Trong thời gian tu nghiệp Cử nhân tại Trung Quốc, bà đã tiếp cận quy trình thiết kế khuôn mẫu chính xác và cách kiểm soát thông số trên dây chuyền tự động. Khi làm việc tại Nhựa Vĩ Hưng, bà không chỉ quản lý mà còn trực tiếp tham gia giám sát từ hạt nhựa nguyên sinh đến thành phẩm. Bà hiểu rõ các lỗi kỹ thuật thực tế mà sách vở không dạy, từ đó áp dụng quy chuẩn quốc tế vào việc xử lý các dòng vật liệu PP, PE, HDPE. Quan điểm của bà là một sản phẩm tốt phải bắt đầu từ việc kiểm soát nhiệt độ nóng chảy chính xác, chứ không chỉ nằm ở mẫu mã. Khi đảm nhận vai trò Phó giám đốc, bà tập trung hiện đại hóa hệ thống máy móc và mở rộng danh mục sản phẩm từ đồ nhựa gia dụng sang nhựa công nghiệp và gia công OEM. Bà đã xây dựng thành công hệ thống đại lý phân phối rộng khắp miền Nam và toàn quốc, đồng thời đưa sản phẩm xuất khẩu sang các thị trường khu vực như Lào, Campuchia, Thái Lan. Dưới sự dẫn dắt của Phó giám đốc Lưu Bích Châu, Nhựa Vĩ Hưng đã đạt được những cột mốc định lượng cụ thể. Trong năm 2023, nhà máy đạt mức tiêu thụ hơn 200 triệu sản phẩm, đáp ứng các đơn hàng lớn cho đối tác F&B và bán lẻ. Bà cũng là người trực tiếp chỉ đạo ra mắt thương hiệu VHOME để tiếp cận người tiêu dùng cuối và phát triển các dòng sản phẩm đạt chuẩn an toàn vệ sinh thực phẩm. Những nỗ lực này đã được ghi nhận khi bà đại diện công ty nhận giải thưởng Hàng Việt Nam Chất Lượng Cao 2025.",
+"nationality":{
+"@type":"Country",
+"name":"Việt Nam",
+"hasMap":[
+"https://www.google.com/maps?cid=12698937955444482750",
+"https://goo.gl/maps/5HUQFbzHSxRuAWVBA"
+],
+"logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/125px-Flag_of_Vietnam.svg.png",
+"url":"https://en.wikipedia.org/wiki/Vietnam",
+"@id":"kg:/m/01crd5",
+"sameAs":[
+"https://www.wikidata.org/wiki/Q881",
+"http://www.productontology.org/doc/Vietnam"
+]
+},
+"worksFor":{
+"@type":"LocalBusiness",
+"@id":"kg:/g/1tkb2lzr"
+},
+"alumniOf":[
+{
+"@type":"EducationalOrganization",
+"sameAs":[
+"https://www.fudan.edu.cn/en/",
+"https://vi.wikipedia.org/wiki/Đại_học_Phục_Đán"
+],
+"name":"Đại học Fudan",
+"url":"https://www.fudan.edu.cn/en/",
+"@id":"kg:/m/0jktd",
+"description":"Đại học Phục Đán là một đại học công lập tại Thượng Hải, Trung Quốc. Thành lập năm 1905 không lâu trước khi nhà Thanh sụp đổ, đại học Phục Đán là một trong những đại học hiện đại đầu tiên của Trung Quốc, cho đến nay đây vẫn là một trong những đại học hàng đầu tại đất nước này.",
+"mainEntityOfPage":"https://www.fudan.edu.cn/en/"
+}
+],
+"knows":[
+{
+"@type":"Person",
+"sameAs":[
+"https://www.google.com/search?kgmid=/m/01m114",
+"https://vi.wikipedia.org/wiki/Leo_Hendrick_Baekeland"
+],
+"name":"Leo Hendrick Baekeland",
+"@id":"kg:/m/01m114",
+"description":"Leo Hendrick Baekeland (14 tháng 11 năm 1863 – 23 tháng 2 năm 1944) là nhà hoá học người Mỹ gốc Bỉ. Ông được sinh ra tại Gent (Bỉ) và mất tại Beacon, New York, Hoa Kỳ). Trong thời gian 1905–1907 Baekeland đã phát triển loại nhựa đầu tiên được sản xuất hàng loạt có tên là Bakelite.",
+"jobTitle":"Nhà hoá học"
+},
+{
+"@type":"Person",
+"sameAs":[
+"https://www.google.com/search?kgmid=/m/03cb6n",
+"https://vi.wikipedia.org/wiki/Hermann_Staudinger"
+],
+"name":"Hermann Staudinger",
+"@id":"kg:/m/03cb6n",
+"description":"Hermann Staudinger (23.3.1881 – 8.9.1965) là nhà hóa học người Đức, người đã chứng minh sự hiện hữu của các đại phân tử, mà ông mô tả đặc điểm như là các polymer. Ông đã được trao Giải Nobel Hóa học 1953 cho công trình phát hiện này. Ông cũng nổi tiếng về việc khám phá ra ketene và về phản ứng Staudinger.",
+"jobTitle":"Nhà hoá học"
+},
+{
+"@type":"Person",
+"name":"Karl Ziegler",
+"@id":"kg:/m/02pxws",
+"sameAs":[
+"https://vi.wikipedia.org/wiki/Karl_Ziegler",
+"https://www.google.com/search?kgmid=/m/02pxws"
+],
+"description":"Karl Waldemar Ziegler (26.11.1898 – 12.8.1973) là nhà hóa học người Đức đã đoạt giải Nobel Hóa học năm 1963 chung với Giulio Natta, cho công trình nghiên cứu về polyme. Năm 1960, Ziegler được nhận giải Werner von Siemens Ring – chung với Otto Bayer và Walter Reppe – vì đã mở rộng sự hiểu biết khoa học và phát triển kỹ thuật các vật liệu tổng hợp mới. Năm 1963, ông đoạt giải Nobel Hóa học",
+"jobTitle":"Nhà hoá học"
+},
+{
+"@type":"Person",
+"name":"Wallace Carothers",
+"@id":"kg:/m/01fqqp",
+"sameAs":[
+"https://en.wikipedia.org/wiki/Wallace_Carothers",
+"https://www.google.com/search?kgmid=/m/01fqqp"
+],
+"description":"Wallace Hume Carothers (April 27, 1896 – April 29, 1937) was an American chemist, inventor, and the leader of organic chemistry at DuPont, who was credited with the invention of nylon.",
+"jobTitle":"Nhà hoá học"
+}
+],
+"knowsAbout":[
+{
+"@type":"Specialty",
+"name":"Polypropylene",
+"@id":"kg:/m/01cnhn",
+"url":"https://vi.wikipedia.org/wiki/Polypropylen",
+"description":"Polypropylene là một loại polymer là sản phẩm của phản ứng trùng hợp propylen.",
+"additionalType":[
+"https://vi.wikipedia.org/wiki/Polypropylen",
+"https://www.wikidata.org/wiki/Q146174",
+"https://www.google.com.vn/search?kgmid=/m/01cnhn"
+]
+},
+{
+"@type":"Specialty",
+"name":"Polyethylene",
+"@id":"kg:/m/0k8xc",
+"url":"https://vi.wikipedia.org/wiki/Polyethylen",
+"description":"Polyethylen (tiếng Anh: polyethylene hay polyethene; viết tắt: PE), là một nhựa nhiệt dẻo (thermoplastic) được sử dụng rất phổ biến trên thế giới (hàng năm tiêu thụ trên 60 triệu tấn) để làm ra các sản phẩm như ống nhựa, mút cứng, túi nhựa.... Công thức tổng quát của nó là (̵C2H4)̵.",
+"additionalType":[
+"https://vi.wikipedia.org/wiki/Polyethylen",
+"https://www.wikidata.org/wiki/Q143429",
+"https://www.google.com.vn/search?kgmid=/m/0k8xc"
+]
+},
+{
+"@type":"Specialty",
+"name":"High-density polyethylene",
+"@id":"kg:/m/065ljq",
+"url":"https://en.wikipedia.org/wiki/High-density_polyethylene",
+"description":"High-density polyethylene (HDPE) or polyethylene high-density (PEHD) is a thermoplastic polymer produced from the monomer ethylene. It is sometimes called 'alkathene' or 'polythene' when used for HDPE pipes.[1] With a high strength-to-density ratio, HDPE is used in the production of plastic bottles, corrosion-resistant piping, geomembranes and plastic lumber. HDPE is commonly recycled, and has the number '2' as its resin identification code.",
+"additionalType":[
+"https://en.wikipedia.org/wiki/High-density_polyethylene",
+"https://www.wikidata.org/wiki/Q2641430",
+"https://www.google.com.vn/search?kgmid=/m/065ljq"
+]
+},
+{
+"@type":"Specialty",
+"name":"Polyethylene terephthalate",
+"@id":"kg:/m/01qv0r",
+"url":"https://en.wikipedia.org/wiki/Polyethylene_terephthalate",
+"description":"Polyethylene terephthalate (or poly(ethylene terephthalate),[5] PET, PETE, or the obsolete PETP or PET-P) is the most common thermoplastic polymer resin of the polyester family and is used in fibres for clothing, containers for liquids and foods, and thermoforming for manufacturing, and in combination with glass fibre for engineering resins",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Polyethylene_terephthalate",
+"https://www.wikidata.org/wiki/Q145863",
+"https://www.google.com.vn/search?kgmid=/m/01qv0r"
+]
+},
+{
+"@type":"Specialty",
+"name":"Polystyrene",
+"@id":"kg:/m/016jr1",
+"url":"https://vi.wikipedia.org/wiki/Polystyren",
+"description":"Polystyren (viết tắt và thường gọi là PS) là một loại nhựa nhiệt dẻo, được tạo thành từ phản ứng trùng hợp styren. Công thức cấu tạo của polystyren là (̵CH[C6H5]-CH2)̵n.",
+"additionalType":[
+"https://vi.wikipedia.org/wiki/Polystyren",
+"https://www.wikidata.org/wiki/Q146243",
+"https://www.google.com.vn/search?kgmid=/m/016jr1"
+]
+},
+{
+"@type":"Specialty",
+"name":"Acrylonitrile butadiene styrene",
+"@id":"kg:/m/01hzpr",
+"url":"https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene",
+"description":"Acrylonitrile butadiene styrene (ABS) (chemical formula (C8H8)x·​(C4H6)y·​(C3H3N)z ) is a thermoplastic polymer, in common use since the 1950s. At room temperature it is an amorphous solid, and has no definitive melting point, due to the varying length of monomer chains, and various degrees of cross-linking. Its glass transition temperature is approximately 105 °C (221 °F).",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene",
+"https://www.wikidata.org/wiki/Q143496",
+"https://www.google.com.vn/search?kgmid=/m/01hzpr"
+]
+},
+{
+"@type":"Specialty",
+"name":"Chất dẻo",
+"@id":"kg:/m/05z87r",
+"url":"https://en.wikipedia.org/wiki/Chất_dẻo",
+"description":"Chất dẻo, hay còn gọi là nhựa hoặc mủ, là các hợp chất cao phân tử, được dùng làm vật liệu để sản xuất nhiều loại vật dụng trong đời sống hằng ngày như là: áo mưa, ống dẫn điện... cho đến những sản phẩm công nghiệp, gắn với đời sống hiện đại của con người. Chúng là những vật liệu có khả năng bị biến dạng khi chịu tác dụng của nhiệt, áp suất và vẫn giữ được sự biến dạng đó khi thôi tác dụng. Chất dẻo còn được sử dụng rộng rãi để thay thế cho các sản phẩm làm bằng: vải, gỗ, da, kim loại, thủy tinh. Vì chúng bền, nhẹ, khó vỡ, nhiều màu sắc đẹp.",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Chất_dẻo",
+"https://www.wikidata.org/wiki/Q11474",
+"https://www.google.com.vn/search?kgmid=/m/05z87"
+]
+},
+{
+"@type":"Specialty",
+"name":"Máy ép nhựa",
+"@id":"kg:/m/01w3qt",
+"url":"https://en.wikipedia.org/wiki/Máy_ép_nhựa",
+"description":"Máy ép nhựa (injection molding machine) hay còn gọi là máy ép keo, bao gồm hai khối chính: Clamp Unit: Khối kềm, tạo ra lực kềm giữ cho khuôn. Injection unit: Khối phun, tạo áp suất và nhiệt độ cho nhựa chảy lỏng vào trong khuôn.",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Máy_ép_nhựa",
+"https://www.wikidata.org/wiki/Q260606",
+"https://www.google.com.vn/search?kgmid=/m/01w3qt"
+]
+},
+{
+"@type":"Specialty",
+"name":"Blow molding",
+"@id":"kg:/m/06g6qq",
+"url":"https://en.wikipedia.org/wiki/Blow_molding",
+"description":"Blow molding (or moulding) is a manufacturing process for forming hollow plastic parts. It is also used for forming glass bottles or other hollow shapes.",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Blow_molding",
+"https://www.wikidata.org/wiki/Q881884",
+"https://www.google.com.vn/search?kgmid=/m/06g6qq"
+]
+},
+{
+"@type":"Specialty",
+"name":"Extrusion",
+"@id":"kg:/m/03hmz4",
+"url":"https://en.wikipedia.org/wiki/Extrusion",
+"description":"Extrusion is a process used to create objects of a fixed cross-sectional profile by pushing material through a die of the desired cross-section. Its two main advantages over other manufacturing processes are its ability to create very complex cross-sections; and to work materials that are brittle, because the material encounters only compressive and shear stresses. It also creates excellent surface finish and gives considerable freedom of form in the design process",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Extrusion",
+"https://www.wikidata.org/wiki/Q139143",
+"https://www.google.com.vn/search?kgmid=/m/03hmz4"
+]
+},
+{
+"@type":"Specialty",
+"name":"Thermoforming",
+"@id":"kg:/m/04b7qg",
+"url":"https://en.wikipedia.org/wiki/Thermoforming",
+"description":"Thermoforming is a manufacturing process where a plastic sheet is heated to a pliable forming temperature, formed to a specific shape in a mold, and trimmed to create a usable product. The sheet, or 'film' when referring to thinner gauges and certain material types, is heated in an oven to a high-enough temperature that permits it to be stretched into or onto a mold and cooled to a finished shape. Its simplified version is vacuum forming.",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Thermoforming",
+"https://www.wikidata.org/wiki/Q1759746",
+"https://www.google.com.vn/search?kgmid=/m/04b7qg"
+]
+},
+{
+"@type":"Specialty",
+"name":"Injection molding machine",
+"@id":"kg:/m/02rm72s",
+"url":"https://en.wikipedia.org/wiki/Injection_molding_machine",
+"description":"An injection molding machine (spelled injection moulding machine in British English), or injection press, is a machine for manufacturing plastic products by the injection molding process. It consists of four main subsystems: the injection unit, the clamping unit, the drive unit, and control systems.",
+"additionalType":[
+"https://en.wikipedia.org/wiki/Injection_molding_machine",
+"https://www.wikidata.org/wiki/Q1756282",
+"https://www.google.com.vn/search?kgmid=/m/02rm72s"
+]
+},
+{
+"@type":"Specialty",
+"name":"Nhiệt độ nóng chảy",
+"@id":"kg:/m/0b15t",
+"url":"https://vi.wikipedia.org/wiki/Nhiệt_độ_nóng_chảy",
+"description":"Nhiệt độ nóng chảy, còn gọi là điểm nóng chảy hay nhiệt độ hóa lỏng, là nhiệt độ mà khi đạt tới ngưỡng đó thì quá trình nóng chảy của một chất xảy ra, tức là chất đó chuyển trạng thái từ rắn sang lỏng.",
+"additionalType":[
+"https://vi.wikipedia.org/wiki/Nhiệt_độ_nóng_chảy",
+"https://www.wikidata.org/wiki/Q15318",
+"https://www.google.com.vn/search?kgmid=/m/0b15t"
+]
+},
+{
+"@type":"Specialty",
+"name":"Food & Drug Administration",
+"@id":"kg:/g/11bw21j973",
+"url":"https://www.fda.gov/",
+"additionalType":[
+"https://www.fda.gov/",
+"https://www.wikidata.org/wiki/Q204711",
+"https://www.google.com.vn/search?kgmid=/g/11bw21j973"
+]
+},
+{
+"@type":"Specialty",
+"name":"Bộ tiêu chuẩn ISO 9000",
+"@id":"kg:/m/012slh",
+"url":"https://vi.wikipedia.org/wiki/Bộ_tiêu_chuẩn_ISO_9000",
+"description":"Bộ tiêu chuẩn ISO 9000 là Bộ tiêu chuẩn quốc tế được xây dựng nhằm trợ giúp các tổ chức, thuộc mọi loại hình và quy mô trong việc xây dựng, áp dụng và vận hành các hệ thống quản lý chất lượng có hiệu lực. ISO 9000 được duy trì bởi tổ chức Tổ chức tiêu chuẩn hóa quốc tế (ISO), là tổ chức đang được hoạt động dựa trên giấy chứng nhận quyền công nhận tiêu chuẩn này.",
+"additionalType":[
+"https://vi.wikipedia.org/wiki/Bộ_tiêu_chuẩn_ISO_9000",
+"https://www.google.com.vn/search?kgmid=/m/012slh"
+]
+},
+{
+"@type":"Specialty",
+"name":"Hội Doanh nghiệp Hàng Việt Nam chất lượng cao",
+"@id":"kg:/g/11hy_0c1tt",
+"url":"https://vi.wikipedia.org/wiki/Hội_Doanh_nghiệp_Hàng_Việt_Nam_chất_lượng_cao",
+"description":"Hội Doanh nghiệp Hàng Việt Nam chất lượng cao, đôi khi viết tắt là Hội DN HVNCLC, là tổ chức xã hội, nghề nghiệp, phi chính phủ, phi lợi nhuận của những doanh nghiệp quan tâm đến lĩnh vực 'hàng Việt Nam chất lượng cao tại Việt Nam.'",
+"additionalType":[
+"https://vi.wikipedia.org/wiki/Hội_Doanh_nghiệp_Hàng_Việt_Nam_chất_lượng_cao",
+"https://www.google.com.vn/search?kgmid=/g/11hy_0c1tt"
+]
+}
+]
+},
+{
+"@type":"WebPage",
+"@id":"https://vihungplastic.com/ve-chung-toi/#Webpage",
+"url":"https://vihungplastic.com/ve-chung-toi/",
+"name":"GIỚI THIỆU VỀ NHỰA VĨ HƯNG",
+"isPartOf":{
+"@id":"https://vihungplastic.com/#Website"
+},
+"inLanguage":"vi-VN",
+"description":"Nhựa Vĩ Hưng (Công ty TNHH Nhựa Vĩ Hưng) là công chuyên gia công, sản xuất nhựa gia dụng, nhựa công nghiệp và bao bì thực phẩm."
+},
+{
+"@type":"WebSite",
+"name":"Nhựa Vĩ Hưng",
+"alternateName":[
+"Công ty TNHH Nhựa Vĩ Hưng",
+"Nhà máy Nhựa Vĩ Hưng",
+"nhuavihung"
+],
+"@id":"https://vihungplastic.com/#Website",
+"url":"https://vihungplastic.com/",
+"description":"Nhựa Vĩ Hưng là doanh nghiệp chuyên cung cấp giải pháp toàn diện gồm: Nhựa gia dụng, Nhựa công nghiệp, Bao bì thực phẩm và Linh kiện xe máy. Với quy trình sản xuất khép kín sử dụng nhựa chính phẩm và đạt chuẩn ISO 9001:2015, HACCP, là đối tác của Pepsi, Coca-Cola, Nestlé.",
+"disambiguatingDescription": "Nhựa Vĩ Hưng tự hào là thương hiệu quốc gia và quốc tế, chuyên cung cấp Premium Plastic Solutions hiện diện tại hơn 500 nhà phân phối trong nước và xuất khẩu đến hơn 60 quốc gia, bao gồm New Zealand, Nga, Pháp và Canada.
+Chúng tôi tập trung vào 4 danh mục cốt lõi: Nhựa gia dụng: An toàn, tiện ích cho đời sống hiện đại, Nhựa công nghiệp: Thùng rác, pallet kỹ thuật cao, Bao bì thực phẩm: Đạt chuẩn an toàn vệ sinh, Linh kiện xe máy: Chính xác và bền bỉ. Nhựa Vĩ Hưng là nhà máy sản xuất nhựa hiện đại với quy trình kiểm soát nghiêm ngặt từng sản phẩm. Cam kết sử dụng nhựa chính phẩm giúp sản phẩm đạt độ tinh khiết và độ bền vượt trội. Uy tín của Vĩ Hưng được bảo chứng qua các chứng nhận quốc tế ISO 9001:2015, HACCP và các tiêu chuẩn kiểm toán khắt khe từ đối tác toàn cầu như Pepsi, Heineken, Nestlé (PMG GMP).",
+"keywords":[
+"Nhựa Vĩ Hưng",
+"Nhà máy nhựa vĩ hưng",
+"công ty nhựa vĩ hưng",
+"nhà máy gia công nhựa vĩ hưng",
+"nhuavihung"
+],
+"sameAs":[
+"https://www.google.com/search?kgmid=/g/1tkb2lzr",
+"https://sites.google.com/view/nhuavihung/",
+"https://www.youtube.com/@nhuavihungofficialchannel1220",
+"https://www.youtube.com/@nhuavihungvn",
+"https://x.com/nhuavihung",
+"https://www.pinterest.com/nhuavihungvn/",
+"https://www.pearltrees.com/nhuavihungvn",
+"https://www.behance.net/nhuavihungvn",
+"https://www.reddit.com/user/nhuavihungvn/",
+"https://nhuavihungvn.blogspot.com/",
+"https://medium.com/@nhuavihung",
+"https://www.instagram.com/nhuavihungvn/",
+"https://www.quora.com/profile/Nhựa-Vĩ-Hưng-1",
+"https://www.flickr.com/people/204068411@N06/",
+"https://www.facebook.com/vihungplastic",
+"https://www.tiktok.com/@nhuavihung",
+"https://about.me/nhuavihungvn",
+"https://500px.com/p/nhuavihungvietnam",
+"https://www.diigo.com/profile/nhuavihung",
+"https://linktr.ee/nhuavihung",
+"https://gravatar.com/nhuavihung",
+"https://www.diigo.com/profile/nhuavihung",
+"https://drive.google.com/drive/folders/1i6fjSZjtkoYyvJZJ9QrdGqWNYatw-OpL"
+],
+"publisher":{
+"@id":"kg:/g/1tkb2lzr"
+},
+"author":{
+"@id":"kg:/g/1tkb2lzr"
+},
+"copyrightHolder":{
+"@id":"kg:/g/1tkb2lzr"
+},
+"potentialAction":{
+"@type":"CommunicateAction",
+"target":{
+"@type":"EntryPoint",
+"urlTemplate":"https://vihungplastic.com/lien-he/",
+"inLanguage":"vi-VN",
+"actionPlatform":[
+"https://schema.org/DesktopWebPlatform",
+"https://schema.org/IOSPlatform",
+"https://schema.org/AndroidPlatform"
+]
+},
+"result":{
+"@type":"Reservation",
+"name":"Liên hệ"
+}
+}
+}
+]
+}
+</script></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=10.760772600000001&lng=106.638713&fid=0x31752ea0335acc3d:0x577aa25d0669ebbd&hl=en&gl=vn&client=earth-client&cv=7.3.6.10441&useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)";</script></body></html>]]></description>
+		<styleUrl>#listing_A</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=10.760772600000001&amp;lng=106.638713&amp;fid=0x31752ea0335acc3d:0x577aa25d0669ebbd&amp;hl=en&amp;gl=vn&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>106.631932,10.7721242,0</coordinates>
+		</Point>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10441"></atom:link>
+	</Placemark>
+</Document>
+</kml>
