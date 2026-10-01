@@ -6,6 +6,7 @@ import SettingsModule from './modules/settings/SettingsModule';
 import BusinessInfoView from './modules/business-info';
 import GoogleStackView from './modules/google-stack';
 import ProfileCreationView from './modules/profile-creation';
+import IndexingModuleView from './modules/indexing';
 import { useNotification } from './context/NotificationContext';
 import Notification from './components/common/Notification';
 
@@ -21,6 +22,7 @@ export default function App() {
       case 'business-info': return <BusinessInfoView />;
       case 'google-stack': return <GoogleStackView />;
       case 'profile-creation': return <ProfileCreationView />;
+      case 'indexing': return <IndexingModuleView />;
       default: return <DashboardModule />;
     }
   };

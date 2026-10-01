@@ -284,6 +284,20 @@ async function initDatabase() {
       )
     `);
 
+    // Bảng indexing_logs (Lưu vết lịch sử ép Index cho Module 4)
+    await query.run(`
+      CREATE TABLE IF NOT EXISTS indexing_logs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        project_id INTEGER NOT NULL,
+        url TEXT NOT NULL,
+        service TEXT NOT NULL,
+        status TEXT DEFAULT 'pending',
+        response_msg TEXT,
+        submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
+      )
+    `);
+
     // Khởi tạo Schema Medium mặc định nếu chưa có
     try {
       const mediumSchema = await query.get("SELECT id FROM social_schemas WHERE platform = 'medium'");

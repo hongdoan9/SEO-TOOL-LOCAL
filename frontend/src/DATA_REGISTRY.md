@@ -212,6 +212,20 @@
 
 ---
 
+### Table: `indexing_logs`
+
+| Column | Type | Constraint | Mô tả |
+|--------|------|-----------|-------|
+| `id` | INTEGER | PRIMARY KEY AUTOINCREMENT | ID log |
+| `project_id` | INTEGER | NOT NULL + FK → `projects.id` ON DELETE CASCADE | Thuộc project nào |
+| `url` | TEXT | NOT NULL | URL đã gửi yêu cầu lập chỉ mục |
+| `service` | TEXT | NOT NULL | Công cụ (`google`, `bing`) |
+| `status` | TEXT | DEFAULT 'pending' | Trạng thái (`success`, `failed`, `pending`) |
+| `response_msg` | TEXT | — | Thông báo chi tiết từ API |
+| `submitted_at` | DATETIME | DEFAULT CURRENT_TIMESTAMP | Thời gian submit |
+
+---
+
 ## Cross-Module References (Tham chiếu chéo)
 
 ```mermaid

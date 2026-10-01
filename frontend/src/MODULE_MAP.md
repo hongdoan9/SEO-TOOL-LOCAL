@@ -248,6 +248,12 @@ frontend/src/
 - **Directory:** `modules/profile-creation/`
 - **Chức năng:** Quản lý Hàng đợi tạo Profile Social tự động, Nạp Presets Schemas (Medium, Reddit, Quora, Pinterest, Tumblr, About.me) và Xuất Links (Export Profiles CSV/Clipboard).
 - **API:** `profile.api.js` (`/api/profile-creation/*`, POST `/api/profile-creation/schemas/seed`)
+
+#### Module 4: Instant Indexing Engine
+- **Directory:** `modules/indexing/`
+- **Chức năng:** Ép Google Search Console & Bing Webmaster lập chỉ mục (Index) hàng loạt URLs (Google Stacks, Social Profiles, bài viết Website).
+- **API:** `indexing.api.js` (`/api/indexing/*`)
+
 - **Extension:** Chrome Extension V3 trong `extension/` thực thi Human Typing & Auto-fill.
 
 #### Dashboard

@@ -78,6 +78,17 @@
 
 ---
 
+### 🔹 Module 4: Instant Indexing Engine (Ép lập chỉ mục khẩn cấp)
+* **Thư mục:** `/frontend/src/modules/indexing/`
+* **Chức năng:**
+  * Ép Google Search Console (qua Google Indexing API) & Bing Webmaster (qua Bing Webmaster API) lập chỉ mục hàng loạt URLs cấp tốc cho Dự án.
+  * Quản lý danh sách các file JSON **Google Service Account Keys** (Mỗi key ép index tối đa 200 URLs/ngày).
+  * Hỗ trợ cấu hình **Bing Webmaster API Key** và Site URL.
+  * Nhập danh sách URLs hàng loạt (Google Stack Assets, Social Profiles, bài viết Website...).
+  * Quản lý bảng **Lịch sử Indexing** chi tiết (Thời gian, số lượng URLs, phản hồi chi tiết từ Search Engine).
+
+---
+
 ### 🔹 Engine Mới Nâng Cấp: Unified Task Queue & Web Automation Platform
 * **Chức năng:**
   * Bảng điều khiển tác vụ tập trung `system_tasks`, hỗ trợ cơ chế tự động thử lại (**Auto-Retry**) khi gặp lỗi mạng/trình duyệt.
@@ -105,6 +116,20 @@
 3. Chọn nền tảng muốn tạo (ví dụ: *Medium, Reddit...*) và bấm **Tạo nhiệm vụ Profile**.
 4. Hàng đợi sẽ nhận job và Chrome Extension sẽ tự động mở cửa sổ trình duyệt thực thi mà bạn không cần thao tác tay!
 
+### Bước 4: Ép lập chỉ mục khẩn cấp (Module 4: Instant Indexing Engine)
+1. **Cấu hình Keys (Lần đầu):**
+   * Vào **Module 4 ➔ Tab ⚙️ Cấu Hình Keys**.
+   * Tải lên file JSON Google Service Account (đã thêm email Service Account vào Google Search Console với quyền Owner).
+   * *(Tùy chọn)* Nhập Bing Webmaster API Key và Domain đăng ký.
+   * Bấm **Lưu Cấu Hình Indexing**.
+2. **Gửi yêu cầu ép Index:**
+   * Chuyển sang Tab **🚀 Ép Index URLs**.
+   * Dán danh sách URLs cần ép Index (Google Stack Docs/Sheet, Social Profiles, bài viết Website...).
+   * Tick chọn **Google Indexing API** và/hoặc **Bing Webmaster API**.
+   * Bấm **Gửi Yêu Cầu Ép Index Khẩn Cấp 🚀**.
+3. **Theo dõi Lịch sử:**
+   * Chuyển sang Tab **📋 Lịch Sử** để xem số lượng URL đã gửi, trạng thái thành công/thất bại và log chi tiết.
+
 ---
 
 ## 4. BẢN ĐỒ CẬP NHẬT MỚI & VỊ TRÍ CODE (CHANGELOG & FILE LOCATIONS)
@@ -121,6 +146,8 @@ Dưới đây là bảng tra cứu chi tiết danh sách các tính năng mới 
 | **Extension Content Script** | Engine xử lý điền form, gõ phím ngẫu nhiên & bóc tách dữ liệu DOM | [extension/content.js](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/extension/content.js) |
 | **Task Monitor Component** | Giao diện React hiển thị bảng tiến độ, Log Terminal & nút dọn dẹp | [frontend/src/shared/components/TaskMonitorView.jsx](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/shared/components/TaskMonitorView.jsx) |
 | **Module Profile Creation** | Giao diện quản lý hàng đợi tạo profile Social | [frontend/src/modules/profile-creation/ProfileCreationView.jsx](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/modules/profile-creation/ProfileCreationView.jsx) |
+| **Module Instant Indexing** | Giao diện ép Google & Bing lập chỉ mục khẩn cấp hàng loạt URLs | [frontend/src/modules/indexing/IndexingModuleView.jsx](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/modules/indexing/IndexingModuleView.jsx) |
+| **Indexing API Routes** | Backend API endpoints xử lý Google Indexing & Bing Webmaster | [backend/src/routes/indexing.routes.js](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/backend/src/routes/indexing.routes.js) |
 | **Bản đồ Module (Docs)** | Danh sách bản đồ cấu trúc tất cả các file trong hệ thống | [frontend/src/MODULE_MAP.md](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/MODULE_MAP.md) |
 | **Bản đồ Dữ liệu (Docs)** | Danh sách Schema và các bảng SQLite Database | [frontend/src/DATA_REGISTRY.md](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/DATA_REGISTRY.md) |
 
