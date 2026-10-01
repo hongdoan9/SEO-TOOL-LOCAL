@@ -7,6 +7,7 @@ import BusinessInfoView from './modules/business-info';
 import GoogleStackView from './modules/google-stack';
 import ProfileCreationView from './modules/profile-creation';
 import IndexingModuleView from './modules/indexing';
+import SocialPbnPosterView from './modules/social-pbn-poster';
 import { useNotification } from './context/NotificationContext';
 import Notification from './components/common/Notification';
 
@@ -23,6 +24,7 @@ export default function App() {
       case 'google-stack': return <GoogleStackView />;
       case 'profile-creation': return <ProfileCreationView />;
       case 'indexing': return <IndexingModuleView />;
+      case 'social-pbn': return <SocialPbnPosterView />;
       default: return <DashboardModule />;
     }
   };

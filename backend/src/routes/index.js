@@ -9,6 +9,7 @@ import systemRoutes from './system.routes.js';
 import profileCreationRoutes from './profile-creation.routes.js';
 import unifiedTaskRoutes from './unified-task.routes.js';
 import indexingRoutes from './indexing.routes.js';
+import socialPbnRoutes from './social-pbn.routes.js';
 
 const router = express.Router();
 router.use('/users', userRoutes);
@@ -20,6 +21,7 @@ router.use('/google-stacks', googleStackRoutes);
 router.use('/profile-creation', profileCreationRoutes);
 router.use('/system-tasks', unifiedTaskRoutes);
 router.use('/indexing', indexingRoutes);
+router.use('/social-pbn', socialPbnRoutes);
 router.use('/', systemRoutes);
 
 export default router;

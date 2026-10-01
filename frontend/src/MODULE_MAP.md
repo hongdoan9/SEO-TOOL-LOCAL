@@ -254,6 +254,11 @@ frontend/src/
 - **Chức năng:** Ép Google Search Console & Bing Webmaster lập chỉ mục (Index) hàng loạt URLs (Google Stacks, Social Profiles, bài viết Website).
 - **API:** `indexing.api.js` (`/api/indexing/*`)
 
+#### Module 5: Auto Social & PBN Poster
+- **Directory:** `modules/social-pbn-poster/`
+- **Chức năng:** Tự động đăng bài & chèn backlink lên WordPress PBN Sites (qua WP REST API) và các trang Mạng xã hội/Web 2.0 (Medium, Tumblr, Dev.to...) qua Chrome Extension Task Queue.
+- **API:** `socialPbn.api.js` (`/api/social-pbn/*`)
+
 - **Extension:** Chrome Extension V3 trong `extension/` thực thi Human Typing & Auto-fill.
 
 #### Dashboard

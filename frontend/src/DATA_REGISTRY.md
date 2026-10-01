@@ -226,6 +226,38 @@
 
 ---
 
+### Table: `pbn_sites`
+
+| Column | Type | Constraint | Mô tả |
+|--------|------|-----------|-------|
+| `id` | INTEGER | PRIMARY KEY AUTOINCREMENT | ID site PBN |
+| `project_id` | INTEGER | NOT NULL + FK → `projects.id` ON DELETE CASCADE | Thuộc project nào |
+| `site_name` | TEXT | NOT NULL | Tên brand/nhận diện site PBN |
+| `site_url` | TEXT | NOT NULL | URL website WordPress |
+| `username` | TEXT | NOT NULL | Username đăng nhập WordPress |
+| `app_password` | TEXT | NOT NULL | Application Password cấp từ WordPress |
+| `status` | TEXT | DEFAULT 'active' | Trạng thái hoạt động |
+| `created_at` | DATETIME | DEFAULT CURRENT_TIMESTAMP | Thời gian khởi tạo |
+
+---
+
+### Table: `social_pbn_posts`
+
+| Column | Type | Constraint | Mô tả |
+|--------|------|-----------|-------|
+| `id` | INTEGER | PRIMARY KEY AUTOINCREMENT | ID log bài đăng |
+| `project_id` | INTEGER | NOT NULL + FK → `projects.id` ON DELETE CASCADE | Thuộc project nào |
+| `target_type` | TEXT | NOT NULL | Loai trang đích (`wordpress` hoặc `social_extension`) |
+| `target_name` | TEXT | NOT NULL | Tên PBN site hoặc tên MXH |
+| `target_url` | TEXT | — | URL trang đích |
+| `post_title` | TEXT | NOT NULL | Tiêu đề bài viết xuất bản |
+| `post_url` | TEXT | — | URL bài viết đã đăng thành công |
+| `status` | TEXT | DEFAULT 'pending' | Trạng thái (`completed`, `failed`, `pending`) |
+| `error_message` | TEXT | — | Thông báo lỗi khi thất bại |
+| `created_at` | DATETIME | DEFAULT CURRENT_TIMESTAMP | Thời gian đăng bài |
+
+---
+
 ## Cross-Module References (Tham chiếu chéo)
 
 ```mermaid

@@ -298,6 +298,38 @@ async function initDatabase() {
       )
     `);
 
+    // Bảng pbn_sites (Lưu danh sách PBN WordPress vệ tinh cho Module 5)
+    await query.run(`
+      CREATE TABLE IF NOT EXISTS pbn_sites (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        project_id INTEGER NOT NULL,
+        site_name TEXT NOT NULL,
+        site_url TEXT NOT NULL,
+        username TEXT NOT NULL,
+        app_password TEXT NOT NULL,
+        status TEXT DEFAULT 'active',
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
+      )
+    `);
+
+    // Bảng social_pbn_posts (Lưu lịch sử bài đăng PBN & Social cho Module 5)
+    await query.run(`
+      CREATE TABLE IF NOT EXISTS social_pbn_posts (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        project_id INTEGER NOT NULL,
+        target_type TEXT NOT NULL,
+        target_name TEXT NOT NULL,
+        target_url TEXT,
+        post_title TEXT NOT NULL,
+        post_url TEXT,
+        status TEXT DEFAULT 'pending',
+        error_message TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
+      )
+    `);
+
     // Khởi tạo Schema Medium mặc định nếu chưa có
     try {
       const mediumSchema = await query.get("SELECT id FROM social_schemas WHERE platform = 'medium'");

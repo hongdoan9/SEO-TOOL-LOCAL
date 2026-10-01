@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Building2, Layers, Settings, Zap, UserPlus, Send } from 'lucide-react';
+import { LayoutDashboard, Building2, Layers, Settings, Zap, UserPlus, Send, Share2 } from 'lucide-react';
 
 export default function Sidebar({ isOpen, activeModule, setActiveModule }) {
   const navItems = [
@@ -9,6 +9,7 @@ export default function Sidebar({ isOpen, activeModule, setActiveModule }) {
     { id: 'google-stack', label: 'Module 2: Google Entity Stacks', icon: <Layers className="w-5 h-5 text-sky-400" /> },
     { id: 'profile-creation', label: 'Module 3: Tạo Profile Social', icon: <UserPlus className="w-5 h-5 text-indigo-400" /> },
     { id: 'indexing', label: 'Module 4: Instant Indexing', icon: <Send className="w-5 h-5 text-amber-400" /> },
+    { id: 'social-pbn', label: 'Module 5: Auto Social & PBN', icon: <Share2 className="w-5 h-5 text-rose-400" /> },
   ];
 
   return (

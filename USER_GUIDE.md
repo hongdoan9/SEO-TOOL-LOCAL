@@ -89,6 +89,16 @@
 
 ---
 
+### 🔹 Module 5: Auto Social & PBN Poster (Tự động đăng bài & share link)
+* **Thư mục:** `/frontend/src/modules/social-pbn-poster/`
+* **Chức năng:**
+  * Quản lý hệ thống website WordPress vệ tinh (PBN Sites): Thêm/sửa/xóa URL, Username, Application Password và tính năng Kiểm tra kết nối REST API.
+  * Soạn thảo bài viết tự động chèn Anchor Text và Target Backlink URL.
+  * Xuất bản bài đăng hàng loạt đến nhiều site WordPress PBN (qua WP REST API) và Mạng xã hội/Web 2.0 (Medium, Tumblr, Dev.to...) qua Chrome Extension Task Queue.
+  * Bảng tổng hợp Lịch sử bài đăng, hiển thị URL bài viết sau khi xuất bản, hỗ trợ sao chép liên kết hàng loạt.
+
+---
+
 ### 🔹 Engine Mới Nâng Cấp: Unified Task Queue & Web Automation Platform
 * **Chức năng:**
   * Bảng điều khiển tác vụ tập trung `system_tasks`, hỗ trợ cơ chế tự động thử lại (**Auto-Retry**) khi gặp lỗi mạng/trình duyệt.
@@ -130,6 +140,20 @@
 3. **Theo dõi Lịch sử:**
    * Chuyển sang Tab **📋 Lịch Sử** để xem số lượng URL đã gửi, trạng thái thành công/thất bại và log chi tiết.
 
+### Bước 5: Đăng bài tự động lên PBN & Social (Module 5: Auto Social & PBN)
+1. **Thêm PBN Sites (Lần đầu):**
+   * Vào **Module 5 ➔ Tab ⚙️ Quản Lý PBN Sites**.
+   * Nhập Tên nhận diện site, URL WordPress, Username và Application Password (tạo từ trang cá nhân trong WordPress).
+   * Bấm **🔍 Thử Kết Nối REST API** để kiểm tra tính đúng đắn.
+   * Bấm **+ Thêm PBN Site** để lưu vào danh sách.
+2. **Soạn bài & Đăng bài:**
+   * Chuyển sang Tab **🚀 Soạn & Đăng Bài**.
+   * Nhập Tiêu đề, Anchor Text, Target URL và Nội dung bài viết.
+   * Tick chọn các PBN Sites và Mạng xã hội muốn xuất bản.
+   * Bấm **🚀 Bắt Đầu Đăng Bài Hàng Loạt**.
+3. **Theo dõi kết quả & Copy Link Output:**
+   * Chuyển sang Tab **📋 Lịch Sử Bài Đăng** để xem danh sách bài viết đã xuất bản, đường dẫn link thật và bấm nút **📋 Copy Tất Cả Link Bài Đăng**.
+
 ---
 
 ## 4. BẢN ĐỒ CẬP NHẬT MỚI & VỊ TRÍ CODE (CHANGELOG & FILE LOCATIONS)
@@ -148,6 +172,8 @@ Dưới đây là bảng tra cứu chi tiết danh sách các tính năng mới 
 | **Module Profile Creation** | Giao diện quản lý hàng đợi tạo profile Social | [frontend/src/modules/profile-creation/ProfileCreationView.jsx](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/modules/profile-creation/ProfileCreationView.jsx) |
 | **Module Instant Indexing** | Giao diện ép Google & Bing lập chỉ mục khẩn cấp hàng loạt URLs | [frontend/src/modules/indexing/IndexingModuleView.jsx](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/modules/indexing/IndexingModuleView.jsx) |
 | **Indexing API Routes** | Backend API endpoints xử lý Google Indexing & Bing Webmaster | [backend/src/routes/indexing.routes.js](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/backend/src/routes/indexing.routes.js) |
+| **Module Auto Social & PBN** | Giao diện đăng bài tự động lên PBN Sites và Mạng xã hội | [frontend/src/modules/social-pbn-poster/SocialPbnPosterView.jsx](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/modules/social-pbn-poster/SocialPbnPosterView.jsx) |
+| **Social PBN API Routes** | Backend API endpoints xử lý WP REST API & Extension Posting | [backend/src/routes/social-pbn.routes.js](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/backend/src/routes/social-pbn.routes.js) |
 | **Bản đồ Module (Docs)** | Danh sách bản đồ cấu trúc tất cả các file trong hệ thống | [frontend/src/MODULE_MAP.md](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/MODULE_MAP.md) |
 | **Bản đồ Dữ liệu (Docs)** | Danh sách Schema và các bảng SQLite Database | [frontend/src/DATA_REGISTRY.md](file:///c:/Users/Admin/Rosedi/tool-seo-v2-main/frontend/src/DATA_REGISTRY.md) |
 
