@@ -24,9 +24,31 @@ export const getProfiles = async (projectId) => {
   return response.data;
 };
 
-// Thêm nhiệm vụ Profile mới vào Hàng đợi
+// Thêm 1 nhiệm vụ Profile mới vào Hàng đợi
 export const createProfileTask = async (projectId, platform) => {
   const response = await api.post('/profile-creation/tasks', { projectId, platform });
+  return response.data;
+};
+
+// Thêm hàng loạt nhiệm vụ Profile
+export const bulkCreateProfileTasks = async (projectId, platforms) => {
+  const response = await api.post('/profile-creation/tasks/bulk', { projectId, platforms });
+  return response.data;
+};
+
+// Thử lại Profile task bị thất bại
+export const retryProfileTask = async (id) => {
+  const response = await api.post('/profile-creation/tasks/retry', { id });
+  return response.data;
+};
+
+// Gửi trực tiếp URL Profile sang Module 4 Indexing Engine
+export const sendProfileToIndexing = async (projectId, urls) => {
+  const response = await api.post('/indexing/submit-urls', {
+    projectId,
+    urls,
+    services: ['google', 'bing']
+  });
   return response.data;
 };
 

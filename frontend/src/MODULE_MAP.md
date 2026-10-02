@@ -246,8 +246,8 @@ frontend/src/
 
 #### Module 3: Profile Creation Workflow
 - **Directory:** `modules/profile-creation/`
-- **Chức năng:** Quản lý Hàng đợi tạo Profile Social tự động, Nạp Presets Schemas (Medium, Reddit, Quora, Pinterest, Tumblr, About.me) và Xuất Links (Export Profiles CSV/Clipboard).
-- **API:** `profile.api.js` (`/api/profile-creation/*`, POST `/api/profile-creation/schemas/seed`)
+- **Chức năng:** Quản lý Hàng đợi tạo Profile Social tự động với 18 Nền tảng nổi bật nhất (Facebook, Twitter/X, LinkedIn, Instagram, Youtube, Github, TikTok, Medium, Reddit, Quora, Pinterest, Tumblr, About.me, Dev.to, Gravatar, Linktree, Telegra.ph, Behance). Tích hợp Tạo hàng loạt (Bulk Create), Xem trước dữ liệu (Data Preview Modal), 1-Click gửi sang Module 4 Indexing Engine, Thử lại task lỗi (Retry) và Xuất Links.
+- **API:** `profile.api.js` (`/api/profile-creation/*`, `/api/profile-creation/tasks/bulk`, `/api/profile-creation/tasks/retry`)
 
 #### Module 4: Instant Indexing Engine
 - **Directory:** `modules/indexing/`

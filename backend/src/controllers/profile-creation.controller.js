@@ -47,7 +47,7 @@ export const saveSchema = async (req, res) => {
   }
 };
 
-// 2b. Nạp danh sách Presets Schemas Mẫu
+// 2b. Nạp danh sách Presets Schemas Mẫu (18 Platforms)
 export const seedPresets = async (req, res) => {
   try {
     let count = 0;
@@ -89,46 +89,84 @@ export const getProfiles = async (req, res) => {
   }
 };
 
-// 4. Tạo nhiệm vụ (Task) tạo Profile mới trong Hàng đợi
+// Helper internal tạo task đơn lẻ
+const createSingleTask = async (projectId, platform) => {
+  const result = await query.run(
+    'INSERT INTO social_profiles (project_id, platform, status, logs) VALUES (?, ?, "pending", "Đã thêm vào hàng đợi...")',
+    [projectId, platform]
+  );
+  const schemaRow = await query.get('SELECT schema_json FROM social_schemas WHERE platform = ?', [platform]);
+  const schemaObj = schemaRow ? JSON.parse(schemaRow.schema_json) : null;
+  const bizRow = await query.get('SELECT * FROM business_info WHERE project_id = ?', [projectId]);
+  const biz = bizRow || {};
+
+  if (schemaObj) {
+    await unifiedTaskService.createTask({
+      projectId: parseInt(projectId),
+      moduleType: 'profile_creation',
+      taskName: `Tạo Profile ${platform.toUpperCase()}`,
+      payload: {
+        email: biz.email || 'seotest.auto@gmail.com',
+        brand: biz.brand || biz.company_name || 'My Brand',
+        company_name: biz.company_name || '',
+        website: biz.website || '',
+        bio1: biz.bio1 || biz.usp || '',
+        owner: biz.owner || ''
+      },
+      schemaSteps: schemaObj.steps || []
+    });
+  }
+  return result.id;
+};
+
+// 4. Tạo 1 nhiệm vụ (Task) mới trong Hàng đợi
 export const createTask = async (req, res) => {
   try {
     const { projectId, platform } = req.body;
     if (!projectId || !platform) {
       return res.status(400).json({ error: 'Thiếu projectId hoặc platform.' });
     }
-
-    const result = await query.run(
-      'INSERT INTO social_profiles (project_id, platform, status, logs) VALUES (?, ?, "pending", "Đã thêm vào hàng đợi...")',
-      [projectId, platform]
-    );
-
-    // Đồng thời tạo Task trong Unified System Queue Engine
-    const schemaRow = await query.get('SELECT schema_json FROM social_schemas WHERE platform = ?', [platform]);
-    const schemaObj = schemaRow ? JSON.parse(schemaRow.schema_json) : null;
-    const bizRow = await query.get('SELECT * FROM business_info WHERE project_id = ?', [projectId]);
-    const biz = bizRow || {};
-
-    if (schemaObj) {
-      await unifiedTaskService.createTask({
-        projectId: parseInt(projectId),
-        moduleType: 'profile_creation',
-        taskName: `Tạo Profile ${platform.toUpperCase()}`,
-        payload: {
-          email: biz.email || 'seotest.auto@gmail.com',
-          brand: biz.brand || biz.company_name || 'My Brand',
-          company_name: biz.company_name || '',
-          website: biz.website || '',
-          bio1: biz.bio1 || biz.usp || '',
-          owner: biz.owner || ''
-        },
-        schemaSteps: schemaObj.steps || []
-      });
-    }
-
-    return res.json({ success: true, id: result.id, message: 'Đã thêm nhiệm vụ tạo Profile vào Hàng đợi.' });
+    const id = await createSingleTask(projectId, platform);
+    return res.json({ success: true, id, message: 'Đã thêm nhiệm vụ tạo Profile vào Hàng đợi.' });
   } catch (error) {
     console.error('Lỗi createTask:', error.message);
     return res.status(500).json({ error: 'Không thể tạo nhiệm vụ Profile mới.' });
+  }
+};
+
+// 4b. Tạo Hàng Loạt Task mới (Bulk Create Tasks)
+export const bulkCreateTasks = async (req, res) => {
+  try {
+    const { projectId, platforms } = req.body;
+    if (!projectId || !Array.isArray(platforms) || platforms.length === 0) {
+      return res.status(400).json({ error: 'Thiếu projectId hoặc danh sách platforms.' });
+    }
+    let count = 0;
+    for (const platform of platforms) {
+      await createSingleTask(projectId, platform);
+      count++;
+    }
+    return res.json({ success: true, count, message: `Đã thêm ${count} nhiệm vụ Profile vào Hàng đợi.` });
+  } catch (error) {
+    console.error('Lỗi bulkCreateTasks:', error.message);
+    return res.status(500).json({ error: 'Không thể tạo hàng loạt nhiệm vụ Profile.' });
+  }
+};
+
+// 4c. Thử lại Task thất bại (Retry Task)
+export const retryTask = async (req, res) => {
+  try {
+    const { id } = req.body;
+    if (!id) return res.status(400).json({ error: 'Thiếu Task ID.' });
+
+    await query.run(
+      'UPDATE social_profiles SET status = "pending", logs = "Đã đặt lại kịch bản thử lại...", updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+      [id]
+    );
+    return res.json({ success: true, message: 'Đã đặt lại trạng thái thử lại cho Task.' });
+  } catch (error) {
+    console.error('Lỗi retryTask:', error.message);
+    return res.status(500).json({ error: 'Không thể đặt lại trạng thái Task.' });
   }
 };
 
@@ -150,20 +188,14 @@ export const getNextAgentTask = async (req, res) => {
     const task = await query.get(
       'SELECT * FROM social_profiles WHERE status = "pending" ORDER BY id ASC LIMIT 1'
     );
+    if (!task) return res.json({ hasTask: false });
 
-    if (!task) {
-      return res.json({ hasTask: false });
-    }
-
-    // Lấy Schema tương ứng
     const schemaRow = await query.get('SELECT schema_json FROM social_schemas WHERE platform = ?', [task.platform]);
     const schema = schemaRow ? JSON.parse(schemaRow.schema_json) : null;
 
-    // Lấy dữ liệu Business Info của Project
     const bizRow = await query.get('SELECT * FROM business_info WHERE project_id = ?', [task.project_id]);
     const biz = bizRow || {};
 
-    // Cập nhật trạng thái task sang "in_progress"
     await query.run(
       'UPDATE social_profiles SET status = "in_progress", updated_at = CURRENT_TIMESTAMP WHERE id = ?',
       [task.id]

@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Play, Trash2, ExternalLink, RefreshCw, CheckCircle, Clock, AlertCircle, Sparkles, Download } from 'lucide-react';
+import { Play, Trash2, ExternalLink, RefreshCw, CheckCircle, Clock, AlertCircle, Sparkles, Download, Layers, Send, RotateCcw } from 'lucide-react';
 
 export default function ProfileQueueTable({
   profiles,
   schemas,
   onCreateTask,
+  onBulkCreate,
+  onRetryTask,
+  onSendToIndexing,
   onDeleteTask,
   onRefresh,
   onSeedPresets,
@@ -59,18 +62,28 @@ export default function ProfileQueueTable({
             </span>
           </h3>
           <p className="text-xs text-slate-400 mt-1">
-            Extension sẽ tự động lấy các task "Đang chờ" để thực thi theo thứ tự.
+            Extension sẽ tự động lấy các task "Đang chờ" để thực thi gõ phím ngầm theo thứ tự.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2.5">
+          {/* Nút Tạo Hàng Loạt */}
+          <button
+            onClick={onBulkCreate}
+            disabled={loading || schemas.length === 0}
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-slate-950 font-black text-xs shadow-md shadow-sky-500/20 transition-all disabled:opacity-50"
+            title="Dồn toàn bộ Nền tảng mẫu vào Hàng đợi"
+          >
+            <Layers className="w-4 h-4 fill-current" /> Tạo Hàng Loạt ({schemas.length})
+          </button>
+
           <button
             onClick={onSeedPresets}
             disabled={loading}
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 border border-purple-500/20 text-xs font-bold transition-all"
-            title="Nạp cấu hình mẫu cho Medium, Reddit, Quora, Pinterest..."
+            title="Nạp 18 Schemas mẫu cho Facebook, X, LinkedIn, Instagram..."
           >
-            <Sparkles className="w-4 h-4" /> Nạp Schemas Mẫu
+            <Sparkles className="w-4 h-4" /> Nạp 18 Schemas
           </button>
 
           <button
@@ -83,20 +96,20 @@ export default function ProfileQueueTable({
           <button
             onClick={onRefresh}
             disabled={loading}
-            className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all border border-slate-700"
+            className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all border border-slate-700"
             title="Làm mới"
           >
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
           </button>
 
-          {/* Quick Task Creation Dropdown */}
+          {/* Single Task Select Dropdown */}
           <div className="flex items-center gap-2">
             <select
               value={selectedPlatform}
               onChange={(e) => setSelectedPlatform(e.target.value)}
               className="bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-sky-500"
             >
-              <option value="">-- Chọn Nền Tảng --</option>
+              <option value="">-- Chọn 1 Nền Tảng --</option>
               {schemas.map((s) => (
                 <option key={s.platform} value={s.platform}>
                   {s.name}
@@ -106,10 +119,9 @@ export default function ProfileQueueTable({
             <button
               onClick={handleCreateSelected}
               disabled={!selectedPlatform}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 disabled:opacity-50 text-slate-950 font-bold text-xs shadow-lg shadow-sky-500/20 transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 border border-slate-700 font-bold text-xs transition-all disabled:opacity-50"
             >
-              <Play className="w-3.5 h-3.5 fill-current" />
-              Tạo Task
+              <Play className="w-3.5 h-3.5 fill-current" /> Thêm 1 Task
             </button>
           </div>
         </div>
@@ -130,7 +142,7 @@ export default function ProfileQueueTable({
             {profiles.length === 0 ? (
               <tr>
                 <td colSpan={5} className="py-8 text-center text-slate-500 text-xs">
-                  Chưa có nhiệm vụ tạo Profile nào trong hàng đợi. Nhấp "Nạp Schemas Mẫu" và chọn Nền tảng để bắt đầu!
+                  Chưa có nhiệm vụ tạo Profile nào trong hàng đợi. Bấm "Nạp 18 Schemas" hoặc "Tạo Hàng Loạt" để bắt đầu!
                 </td>
               </tr>
             ) : (
@@ -157,10 +169,32 @@ export default function ProfileQueueTable({
                   <td className="py-4 px-4 text-slate-400 text-xs">
                     {new Date(p.created_at).toLocaleString('vi-VN')}
                   </td>
-                  <td className="py-4 px-4 text-right">
+                  <td className="py-4 px-4 text-right space-x-2">
+                    {/* Nút ⚡ Ép Index khi hoàn thành */}
+                    {p.status === 'completed' && p.profile_url && (
+                      <button
+                        onClick={() => onSendToIndexing(p.profile_url)}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/20 text-xs font-bold transition-all"
+                        title="Gửi trực tiếp URL Profile này sang Module 4 để ép Google & Bing lập chỉ mục"
+                      >
+                        <Send className="w-3 h-3" /> ⚡ Ép Index
+                      </button>
+                    )}
+
+                    {/* Nút 🔄 Thử lại khi lỗi */}
+                    {p.status === 'failed' && (
+                      <button
+                        onClick={() => onRetryTask(p.id)}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-500/20 text-xs font-bold transition-all"
+                        title="Đặt lại kịch bản cho Extension thử lại"
+                      >
+                        <RotateCcw className="w-3 h-3" /> Thử lại
+                      </button>
+                    )}
+
                     <button
                       onClick={() => onDeleteTask(p.id)}
-                      className="p-1.5 rounded-lg text-slate-500 hover:text-rose-400 hover:bg-rose-500/10 transition-all"
+                      className="p-1.5 rounded-lg text-slate-500 hover:text-rose-400 hover:bg-rose-500/10 transition-all inline-block"
                       title="Xóa"
                     >
                       <Trash2 className="w-4 h-4" />
@@ -175,4 +209,3 @@ export default function ProfileQueueTable({
     </div>
   );
 }
-

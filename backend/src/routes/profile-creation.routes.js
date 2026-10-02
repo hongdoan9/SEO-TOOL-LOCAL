@@ -5,6 +5,8 @@ import {
   seedPresets,
   getProfiles,
   createTask,
+  bulkCreateTasks,
+  retryTask,
   deleteProfile,
   getNextAgentTask,
   reportAgentTask
@@ -18,6 +20,8 @@ router.post('/schemas', saveSchema);
 router.post('/schemas/seed', seedPresets);
 router.get('/profiles/:projectId', getProfiles);
 router.post('/tasks', createTask);
+router.post('/tasks/bulk', bulkCreateTasks);
+router.post('/tasks/retry', retryTask);
 router.delete('/profiles/:id', deleteProfile);
 
 // Route cho Chrome Extension (Agent)

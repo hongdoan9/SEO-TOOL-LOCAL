@@ -72,9 +72,11 @@
 ### 🔹 Module 3: Profile Creation Workflow (Tự động tạo Social Profiles)
 * **Thư mục:** `/frontend/src/modules/profile-creation/`
 * **Chức năng:**
-  * Quản lý hàng đợi tạo tài khoản trên các trang mạng xã hội: **Medium, Reddit, Quora, Pinterest, Tumblr, About.me**.
-  * Quản lý Schema Selectors (Preset Schemas) kịch bản từng bước điền form.
-  * Xuất kết quả liên kết Profile hoàn thành ra file CSV hoặc sao chép Clipboard.
+  * Quản lý hàng đợi tạo profile tự động trên **18 Mạng xã hội & Web 2.0 nổi bật**: **Facebook, Twitter/X, LinkedIn, Instagram, Youtube, Github, TikTok, Medium, Reddit, Quora, Pinterest, Tumblr, About.me, Dev.to, Gravatar, Linktree, Telegra.ph, Behance**.
+  * **Tạo Hàng Loạt (Bulk Create):** 1-Click dồn toàn bộ 18 nền tảng vào Hàng đợi.
+  * **Cross-Module Indexing:** 1-Click gửi URL Profile hoàn thành sang **Module 4 (Instant Indexing)** để ép Google & Bing lập chỉ mục.
+  * **Retry & Data Preview:** Nút thử lại task lỗi và Modal xem trước dữ liệu điền Form từ Module 1.
+  * Quản lý Schema Selectors (Preset Schemas) và Xuất kết quả Profile links ra file CSV/Clipboard.
 
 ---
 

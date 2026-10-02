@@ -1,20 +1,34 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { UserPlus, Settings, Puzzle, CheckCircle } from 'lucide-react';
+import { UserPlus, Settings, Puzzle, CheckCircle, Eye } from 'lucide-react';
 import { useUser } from '../../context/UserContext';
+import { useProjectData } from '../../context/ProjectDataContext';
 import { useNotification } from '../../context/NotificationContext';
 import ProfileQueueTable from './components/ProfileQueueTable';
 import SchemaManagerModal from './components/SchemaManagerModal';
 import ProfileExportModal from './components/ProfileExportModal';
-import { getSchemas, saveSchema, seedPresetSchemas, getProfiles, createProfileTask, deleteProfileTask } from './profile.api';
+import ProfilePreviewModal from './components/ProfilePreviewModal';
+import {
+  getSchemas,
+  saveSchema,
+  seedPresetSchemas,
+  getProfiles,
+  createProfileTask,
+  bulkCreateProfileTasks,
+  retryProfileTask,
+  sendProfileToIndexing,
+  deleteProfileTask
+} from './profile.api';
 
 export default function ProfileCreationView() {
   const { selectedProject: currentProject } = useUser();
+  const { businessInfo } = useProjectData();
   const { showNotification } = useNotification();
   const [schemas, setSchemas] = useState([]);
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isExportOpen, setIsExportOpen] = useState(false);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   const loadData = useCallback(async () => {
     if (!currentProject) return;
@@ -33,7 +47,6 @@ export default function ProfileCreationView() {
     }
   }, [currentProject, showNotification]);
 
-  // Cập nhật ngầm danh sách profiles mà không làm giật giao diện (Silent polling)
   const silentRefreshProfiles = useCallback(async () => {
     if (!currentProject) return;
     try {
@@ -46,12 +59,9 @@ export default function ProfileCreationView() {
 
   useEffect(() => {
     loadData();
-
-    // Tự động làm mới trạng thái Hàng đợi mỗi 3 giây
     const interval = setInterval(() => {
       silentRefreshProfiles();
     }, 3000);
-
     return () => clearInterval(interval);
   }, [loadData, silentRefreshProfiles]);
 
@@ -66,6 +76,45 @@ export default function ProfileCreationView() {
       loadData();
     } catch (err) {
       showNotification('Không thể thêm nhiệm vụ mới.', 'error');
+    }
+  };
+
+  const handleBulkCreate = async () => {
+    if (!currentProject) return;
+    if (schemas.length === 0) {
+      showNotification('Vui lòng bấm "Nạp 18 Schemas" trước khi tạo hàng loạt.', 'error');
+      return;
+    }
+    try {
+      setLoading(true);
+      const platforms = schemas.map(s => s.platform);
+      const res = await bulkCreateProfileTasks(currentProject.id, platforms);
+      showNotification(res.message || `Đã dồn ${platforms.length} Nền tảng vào Hàng đợi!`, 'success');
+      await loadData();
+    } catch (err) {
+      showNotification('Không thể tạo hàng loạt nhiệm vụ.', 'error');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRetryTask = async (id) => {
+    try {
+      await retryProfileTask(id);
+      showNotification('Đã đặt lại trạng thái thử lại cho nhiệm vụ.', 'success');
+      loadData();
+    } catch (err) {
+      showNotification('Không thể thử lại nhiệm vụ.', 'error');
+    }
+  };
+
+  const handleSendToIndexing = async (profileUrl) => {
+    if (!currentProject || !profileUrl) return;
+    try {
+      await sendProfileToIndexing(currentProject.id, [profileUrl]);
+      showNotification(`Đã gửi URL Profile sang Module 4 Indexing Engine!`, 'success');
+    } catch (err) {
+      showNotification('Lỗi khi gửi sang Module 4 Indexing.', 'error');
     }
   };
 
@@ -93,7 +142,7 @@ export default function ProfileCreationView() {
     try {
       setLoading(true);
       const res = await seedPresetSchemas();
-      showNotification(res.message || 'Đã nạp Presets Schemas thành công!', 'success');
+      showNotification(res.message || 'Đã nạp 18 Presets Schemas thành công!', 'success');
       await loadData();
     } catch (err) {
       showNotification('Lỗi khi nạp Presets Schemas.', 'error');
@@ -125,14 +174,23 @@ export default function ProfileCreationView() {
               </h1>
             </div>
             <p className="text-xs text-slate-400 max-w-2xl">
-              Tự động điền thông tin doanh nghiệp (Brand, Bio, Website, Avatar) từ Module 1 lên các nền tảng Mạng xã hội thông qua Chrome Extension.
+              Tự động điền thông tin doanh nghiệp (Brand, Bio, Website, Email) từ Module 1 lên 18 Nền tảng Mạng xã hội nổi bật qua Chrome Extension Agent.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
             <button
+              onClick={() => setIsPreviewOpen(true)}
+              className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all"
+              title="Xem trước dữ liệu điền Form"
+            >
+              <Eye className="w-4 h-4 text-emerald-400" />
+              Xem Dữ Liệu Điền
+            </button>
+
+            <button
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all"
             >
               <Settings className="w-4 h-4 text-sky-400" />
               Cấu Hình Schemas
@@ -159,6 +217,9 @@ export default function ProfileCreationView() {
         profiles={profiles}
         schemas={schemas}
         onCreateTask={handleCreateTask}
+        onBulkCreate={handleBulkCreate}
+        onRetryTask={handleRetryTask}
+        onSendToIndexing={handleSendToIndexing}
         onDeleteTask={handleDeleteTask}
         onRefresh={loadData}
         onSeedPresets={handleSeedPresets}
@@ -180,6 +241,13 @@ export default function ProfileCreationView() {
         onClose={() => setIsExportOpen(false)}
         profiles={profiles}
         projectName={currentProject?.name}
+      />
+
+      {/* Modal Xem Trước Dữ Liệu Điền Form */}
+      <ProfilePreviewModal
+        isOpen={isPreviewOpen}
+        onClose={() => setIsPreviewOpen(false)}
+        businessInfo={businessInfo}
       />
     </div>
   );
